@@ -26,6 +26,12 @@
     "sails-db-migrate": "*",
     "sails-mysql": "*",
     "node-uuid": "*",
+    "log4js": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-twitter": "*",
+    "passport-google-oauth": "*",
+    "passport-linkedin": "*",
     "log4js": "*"
   },
   "scripts": {
