@@ -2,7 +2,7 @@ var dbm = global.dbm || require('db-migrate');
 var type = dbm.dataType;
 
 exports.up = function(db, callback) {
-  db.createTable('schools', {
+  db.createTable('school', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     userId: { type: 'int', notNull: true },
     name: { type: 'string', notNull: true },
@@ -11,10 +11,10 @@ exports.up = function(db, callback) {
     updatedAt: 'datetime',
     createdAt: 'datetime'
   }, function(){
-    db.addIndex('schools', 'school_user_id', 'userId', callback);
+    db.addIndex('school', 'school_user_id', 'userId', callback);
   });
 };
 
 exports.down = function(db, callback) {
-  db.dropTable('schools', callback);
+  db.dropTable('school', callback);
 };
