@@ -6,6 +6,7 @@ exports.up = function(db, callback) {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     userId: { type: 'int', notNull: true },
     toUserId: { type: 'int', notNull: true },
+    readFlg: { type: 'boolean', notNull: true, defaultValue: false },
     text: 'string',
     updatedAt: 'datetime',
     createdAt: 'datetime'

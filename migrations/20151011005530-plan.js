@@ -9,6 +9,7 @@ exports.up = function(db, callback) {
     description: 'text',
     startAt: 'datetime',
     endAt: 'datetime',
+    likeCount: { type: 'int', notNull: true, defaultValue: 0 },
     updatedAt: 'datetime',
     createdAt: 'datetime'
   }, function(){
