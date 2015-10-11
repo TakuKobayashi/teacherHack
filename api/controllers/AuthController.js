@@ -25,6 +25,26 @@ module.exports = {
     })(req, res);
   },
 
+  signup: function(req, res) {
+    var loginObj = {mailAddress: req.param('mailAddress'), password: req.param('password')};
+    User.findOne(loginObj).exec(function(err, user){
+      if ((err) || (user)) {
+        res.redirect('/signup');
+      }else{
+        loginObj["name"] = req.param('name');
+        User.create(loginObj).exec(function(err, user){
+          if ((err) || (!user)) {
+            return res.redirect('/signup');
+          }
+          req.logIn(user, function(err) {
+            if (err) res.send(err);
+            return res.redirect('/');
+          });
+        });
+      }
+    });
+  },
+
   logout: function(req, res) {
     req.logout();
     res.redirect('/');
