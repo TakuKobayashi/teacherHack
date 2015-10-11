@@ -8,6 +8,10 @@ sails lift
 http://localhost:1337/
 をブラウザでアクセスできればOK
 
+なお、
+LOG_QUERIES=true sails lift
+で起動するとSQLの実行logが出力される
+
 # 環境
 DB: Mysql
 
