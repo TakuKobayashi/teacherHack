@@ -10,7 +10,6 @@ module.exports = {
 
   attributes: {
     name: { type: 'string'},
-    sessionToken: { type: 'string'},
     lastLoginedAt: { type: 'datetime'},
     mailAddress: { type: 'string'},
     password: { 
@@ -18,9 +17,6 @@ module.exports = {
       minLength: 6,
       required: true
     },
-    sessionToken: { type: 'string'},
-    updatedAt: { type: 'datetime'},
-    createdAt: { type: 'datetime'},
     toJSON: function() {
       var obj = this.toObject();
       return obj;
