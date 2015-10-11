@@ -41,3 +41,14 @@ passport.use(new LocalStrategy({
     });
   }
 ));
+
+module.exports = {  
+  express: {
+    customMiddleware: function(app){
+      // app: express() オブジェクト
+      console.log("passport module initialize");
+      app.use(passport.initialize());
+      app.use(passport.session());
+    }
+  }
+};
