@@ -28,10 +28,12 @@
     "node-uuid": "*",
     "log4js": "*",
     "passport": "*",
+    "passport-local": "*",
     "passport-facebook": "*",
     "passport-twitter": "*",
     "passport-google-oauth": "*",
     "passport-linkedin": "*",
+    "bcrypt": "*",
     "log4js": "*"
   },
   "scripts": {
