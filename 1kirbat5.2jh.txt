@@ -1,0 +1,23 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	new file:   html/collaborationPlan_view.html
+#	new file:   html/collaborationPlan_view2.html
+#	new file:   html/collaboration_NewArrivalsList.html
+#	new file:   html/collaboration_PopularPlanningList.html
+#	new file:   html/collaboration_RecommendList.html
+#	new file:   html/index.html
+#	new file:   html/manage_PersonalInformation_input.html
+#	new file:   html/manage_PersonalInformation_view.html
+#	new file:   html/manage_message.html
+#	new file:   html/myPlan_Input.html
+#	new file:   html/myPlan_List.html
+#	new file:   html/person_photo.jpg
+#	new file:   html/potal_start.html
+#
+
