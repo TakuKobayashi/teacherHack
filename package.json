@@ -33,7 +33,6 @@
     "passport-twitter": "*",
     "passport-google-oauth": "*",
     "passport-linkedin": "*",
-    "bcrypt": "*",
     "log4js": "*"
   },
   "scripts": {
