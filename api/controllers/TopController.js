@@ -8,7 +8,8 @@
 module.exports = {
   index: function (req,res) {
     if(req.isAuthenticated()){
-      res.view();
+      //User.findOne(loginObj).exec(function(err, user){
+      res.view({user: req.user});
     }else{
       res.view("homepage");
     }
