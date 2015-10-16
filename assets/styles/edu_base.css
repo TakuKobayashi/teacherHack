@@ -1,16 +1,17 @@
 @CHARSET "UTF-8";
 
 body {
-	background-color: #ccffcc
+	background-color: #F3F9EE
 }
 
 h2 {
 	font-size: large;
-	color: #ffffff;
-	background-color: #339933;
+	color: #FDFCD2;
+    background: -moz-linear-gradient(top,#A3D380 0%,#83C882);
+    background: -webkit-gradient(linear, left top, left bottom, from(#A3D380), to(#83C882));
 	line-height: 40px;
 	padding-left: 10px;
-	width: 90%;
+	width: 99%;
 }
 
 li.menuli{
@@ -29,4 +30,42 @@ div.right{
 	border:none;
 	float: right;
 	width: 80%;
+}
+
+div.title{
+    background: -moz-linear-gradient(top,#A3D380 0%,#83C882);
+    background: -webkit-gradient(linear, left top, left bottom, from(#A3D380), to(#83C882));
+	line-height: 40px;
+	width: 99%;
+}
+
+span.title_text{
+	font-size: large;
+	color: #FDFCD2;
+	padding-left: 10px;
+}
+
+a.title_signup{
+	position: absolute; left: 80%; top: 13px; width: 100px; height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	background: -moz-linear-gradient(top,#A3D380 0%,#83C882);
+    background: -webkit-gradient(linear, left top, left bottom, from(#A3D380), to(#83C882));
+    border: 1px solid #BEDFA2;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    color: #FDFCD2;
+}
+
+.btn {
+    background: -moz-linear-gradient(top,#A3D380 0%,#83C882);
+    background: -webkit-gradient(linear, left top, left bottom, from(#A3D380), to(#83C882));
+    border: 1px solid #BEDFA2;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    color: #FDFCD2;
+    width: 100px;
+    padding: 10px 0;
 }

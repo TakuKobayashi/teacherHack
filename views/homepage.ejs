@@ -1,7 +1,14 @@
-<h2>HomePage</h2>
-<img src="/images/Temuco_children.jpg" />
+<div class="title">
+  <span class="title_text">Edu CONNECT</span>
+  <a class="title_signup" href="/signup">signup</a>
+</div>
 <form method="POST" action="/login">
-  メールアドレス：<input type="text" name="mailAddress">
-  パスワード：<input type="text" name="password">
-  <input type="submit" value="ログイン">
-</form>
+  <p style="position: relative;">
+    <img src="/images/Temuco_children.jpg" width="100%" />
+    <div style="position: absolute; top: 35%; left: 80%; width: 120px; color: #333333;">ID</div>
+    <div style="position: absolute; top: 38%; left: 80%; width: 200px;"><input type="text" name="mailAddress"></div>
+    <div style="position: absolute; top: 45%; left: 80%; width: 120px; color: #333333;">Password</div>
+    <div style="position: absolute; top: 48%; left: 80%; width: 120px;"><input type="text" name="password"></div>
+    <div style="position: absolute; top: 53%; left: 80%; width: 120px;"><input class="btn" type="submit" value="login"></div>
+   </p>
+ </form>
