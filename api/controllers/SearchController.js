@@ -6,6 +6,11 @@
  */
 
 module.exports = {
-	
+  index: function(req, res) {
+    res.view();
+  },
+  execute: function(req, res) {
+    return res.redirect('/');
+  },
 };
 

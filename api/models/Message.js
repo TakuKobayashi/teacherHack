@@ -8,6 +8,10 @@
 module.exports = {
 
   attributes: {
+  	user:{
+      model: 'user',
+      columnName: 'userId'
+    },
     userId: { type: 'int'},
     toUserId: { type: 'int'},
     readFlg: { type: 'boolean'},

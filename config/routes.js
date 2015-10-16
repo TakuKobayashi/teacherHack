@@ -48,7 +48,13 @@ module.exports.routes = {
 
   'get /signup': {
     view: 'signup'
-  }
+  },
+  'get /message/show/:id':'MessageController.show',
+  'get /message/new':'MessageController.new',
+  'post /message/create':'MessageController.create',
+  'get /plan/show/:id':'PlanController.show',
+  'get /plan/new/':'PlanController.new',
+  'post /plan/create':'PlanController.create',
 
   /***************************************************************************
   *                                                                          *

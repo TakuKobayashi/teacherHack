@@ -1,0 +1,15 @@
+<div class="top_menu">
+	<ul>
+		<li class="menuli"><a href="/">Home</a>
+		<li class="menuli"><a href="/message/">Message</a>
+		<li class="menuli"><a href="/search/">Search</a>
+	</ul>
+</div>
+<h2>メッセージ一覧</h2>
+<div class="left_message">
+	<table border=1>
+	<% messages.forEach(function(message){ %>
+	  <tr><td colspan="2"><%= message.user.name %>さんからのメッセージ</td><a href="<%= "/message/show/" + message.id %>">詳細</a></tr>
+	<% }); %>
+	</table>
+</div>

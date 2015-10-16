@@ -1,0 +1,15 @@
+<div class="top_menu">
+	<ul>
+		<li class="menuli"><a href="/">Home</a>
+		<li class="menuli"><a href="/message/">Message</a>
+		<li class="menuli"><a href="/search/">Search</a>
+	</ul>
+</div>
+<h2>プラン一覧</h2>
+<div class="right_popular">
+	<table border="1">
+	  <% plans.forEach(function(plan){ %>
+	    <tr><td>タイトル</td><td><%= plan.title %></td><td><a href="<%= "/plan/show/" + plan.id %>">詳細</a></td></tr>
+	  <% }); %>
+	</table>
+</div>

@@ -20,8 +20,6 @@ module.exports = {
             limit:3,
             sort :'id DESC'
           }).exec(function(err, plans){
-          	console.log(messages);
-          	console.log(plans);
             res.view({user: req.user, school: school, messages: messages, plans: plans});
           })
       	});
