@@ -1,8 +1,8 @@
 <div class="top_menu">
 	<ul>
 		<li class="menuli"><a href="/">Home</a>
-		<li class="menuli"><a href="message.html">Message</a>
-		<li class="menuli"><a href="search.html">Search</a>
+		<li class="menuli"><a href="/message/">Message</a>
+		<li class="menuli"><a href="/search/">Search</a>
 	</ul>
 </div>
 <div class="left">
@@ -16,16 +16,16 @@
 <div class="left_message">
 	<table border=1>
 	<tr><th>Recant Message</th><th>New</th><tr>
-	<tr><td colspan="2">メール１件へのリンク</td></tr>
-	<tr><td colspan="2">メール１件へのリンク</td></tr>
-	<tr><td colspan="2">メール１件へのリンク</td></tr>
+	<% messages.forEach(function(message){ %>
+	  <tr><td colspan="2"><a href="<%= "/message/show/" + message.id %>"></td></tr>
+	<% }); %>
 	</table>
 </div>
 <div class="left_etc">
 	<ul>
-		<li><a href="album.html">Album</a>
-		<li><a href="connection.html">Connection</a>
-		<li><a href="recommendations.html">Recommendations</a>
+		<li><a href="/album/">Album</a>
+		<li><a href="/connection/">Connection</a>
+		<li><a href="/recommendation/">Recommendations</a>
 	</ul>
 </div>
 <div class="left_carender">
@@ -34,19 +34,19 @@
 </div>
 <div class="right">
 <div class="right_popular">
-	<h2>Popular Project / Plans</h2><a href="plans.html">See more</a>
+	<h2>Popular Project / Plans</h2><a href="/plans/">See more</a>
 	<table border="1">
-	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
-	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
-	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	  <% plans.forEach(function(plan){ %>
+	    <tr><td><a href="<%= "/plan/show/" + plan.id %>""></td></tr>
+	  <% }); %>
 	</table>
 </div>
 <div class="right_recommendations">
-	<h2>Recommendations</h2><a href="recommendations.html">See more</a>
+	<h2>Recommendations</h2><a href="/recommendation/">See more</a>
 	<table border="1">
-	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
-	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
-	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	  <% plans.forEach(function(plan){ %>
+	    <tr><td><a href="<%= "/plan/show/" + plan.id %>""></td></tr>
+	  <% }); %>
 	</table>
 </div>
 </div>

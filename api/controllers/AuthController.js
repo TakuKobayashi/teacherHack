@@ -27,23 +27,17 @@ module.exports = {
   },
 
   signup: function(req, res) {
-    console.log("sginup");
     var loginObj = {mailAddress: req.param('mailAddress'), password: req.param('password')};
-    console.log(loginObj);
     User.findOne(loginObj).exec(function(err, user){
-      console.log(err);
-      console.log(user);
       if ((err) || (user)) {
         res.redirect('/signup');
       }else{
         loginObj["name"] = req.param('name');
         loginObj["responsible"] = req.param('responsible');
-        console.log(loginObj);
         School.findOne({name: req.param('school_name')}).exec(function(err, school){
           if (err) {
             return res.redirect('/signup');
           }
-          console.log(school);
           if(school){
             loginObj["assignSchoolId"] = school.id
             User.create(loginObj).exec(function(err, user){
