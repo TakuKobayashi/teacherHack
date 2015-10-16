@@ -7,19 +7,6 @@
 
 var passport = require('passport');
 
-var createUser = function(res, obj){
-  User.create(obj).exec(function(err, user){
-    if ((err) || (!user)) {
-      return res.redirect('/signup');
-    }
-
-    req.logIn(user, function(err) {
-      if (err) res.send(err);
-      return res.redirect('/');
-    });
-  });
-}
-
 module.exports = {
   _config: {
     actions: false,
@@ -40,24 +27,48 @@ module.exports = {
   },
 
   signup: function(req, res) {
+    console.log("sginup");
     var loginObj = {mailAddress: req.param('mailAddress'), password: req.param('password')};
+    console.log(loginObj);
     User.findOne(loginObj).exec(function(err, user){
+      console.log(err);
+      console.log(user);
       if ((err) || (user)) {
         res.redirect('/signup');
       }else{
         loginObj["name"] = req.param('name');
         loginObj["responsible"] = req.param('responsible');
+        console.log(loginObj);
         School.findOne({name: req.param('school_name')}).exec(function(err, school){
           if (err) {
             return res.redirect('/signup');
           }
+          console.log(school);
           if(school){
             loginObj["assignSchoolId"] = school.id
-            createUser(res, loginObj);
+            User.create(loginObj).exec(function(err, user){
+              if ((err) || (!user)) {
+                return res.redirect('/signup');
+              }
+
+              req.logIn(user, function(err) {
+                if (err) res.send(err);
+                return res.redirect('/');
+              });
+            });
           }else{
             School.create({name: req.param('school_name')}).exec(function(err, school){
               loginObj["assignSchoolId"] = school.id
-              createUser(res, loginObj);
+              User.create(loginObj).exec(function(err, user){
+                if ((err) || (!user)) {
+                  return res.redirect('/signup');
+                }
+
+                req.logIn(user, function(err) {
+                  if (err) res.send(err);
+                  return res.redirect('/');
+                });
+              });
             });
           }
         });

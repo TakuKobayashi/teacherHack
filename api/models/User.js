@@ -15,6 +15,8 @@ module.exports = {
       minLength: 6,
       required: true
     },
+    assignSchoolId: { type: 'int'},
+    responsible: { type: 'string'},
     toJSON: function() {
       var obj = this.toObject();
       return obj;

@@ -1,6 +1,21 @@
-<h1>Signup</h1>
+<h2>Signup</h2>
 <form method="POST" action="/signup">
-  <input type="mailAddress" name="mailAddress">
-  <input type="password" name="password">
-  <input type="submit" value="submit">
+  <table>
+    <tr>
+      <td>MailAddress</td><td><input type="text" name="mailAddress" /></td>
+    </tr>
+    <tr>
+      <td>Password</td><td><input type="text" name="password" /></td>
+    </tr>
+    <tr>
+      <td>名前</td><td><input type="text" name="name" /></td>
+    </tr>
+    <tr>
+      <td>学校名</td><td><input type="text" name="school_name" /></td>
+    </tr>
+    <tr>
+      <td>所属</td><td><input type="text" name="responsible" /></td>
+    </tr>
+  </table>
+  <input class="btn" type="submit" value="登録する" />
 </form>
