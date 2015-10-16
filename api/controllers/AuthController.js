@@ -6,6 +6,20 @@
  */
 
 var passport = require('passport');
+
+var createUser = function(res, obj){
+  User.create(obj).exec(function(err, user){
+    if ((err) || (!user)) {
+      return res.redirect('/signup');
+    }
+
+    req.logIn(user, function(err) {
+      if (err) res.send(err);
+      return res.redirect('/');
+    });
+  });
+}
+
 module.exports = {
   _config: {
     actions: false,
@@ -32,14 +46,20 @@ module.exports = {
         res.redirect('/signup');
       }else{
         loginObj["name"] = req.param('name');
-        User.create(loginObj).exec(function(err, user){
-          if ((err) || (!user)) {
+        loginObj["responsible"] = req.param('responsible');
+        School.findOne({name: req.param('school_name')}).exec(function(err, school){
+          if (err) {
             return res.redirect('/signup');
           }
-          req.logIn(user, function(err) {
-            if (err) res.send(err);
-            return res.redirect('/');
-          });
+          if(school){
+            loginObj["assignSchoolId"] = school.id
+            createUser(res, loginObj);
+          }else{
+            School.create({name: req.param('school_name')}).exec(function(err, school){
+              loginObj["assignSchoolId"] = school.id
+              createUser(res, loginObj);
+            });
+          }
         });
       }
     });

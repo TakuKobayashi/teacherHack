@@ -8,6 +8,8 @@ exports.up = function(db, callback) {
     lastLoginedAt: { type: 'datetime', notNull: true },
     mailAddress: { type: 'string', notNull: true },
     password: { type: 'string', notNull: true },
+    assignSchoolId: { type: 'int', notNull: true },
+    responsible: { type: 'string'},
     updatedAt: 'datetime',
     createdAt: 'datetime'
   }, function(){
