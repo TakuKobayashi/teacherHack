@@ -1,6 +1,52 @@
-<h2>TopPage</h2>
-<div>
-  <p>ここはTopページです</p>
-  <p>ユーザーの名前:<%= user.name %></p>
-  <p>ユーザーのメアド:<%= user.mailAddress %></p>
+<div class="top_menu">
+	<ul>
+		<li class="menuli"><a href="/">Home</a>
+		<li class="menuli"><a href="message.html">Message</a>
+		<li class="menuli"><a href="search.html">Search</a>
+	</ul>
+</div>
+<div class="left">
+<div class="left_person">
+	<img src="/images/person_photo.jpg" width="64" height="64" alt="自分の写真"/><br />
+	Name: <%= user.name %><br />
+	Contact: <%= user.mailAddress %><br />
+	School: <%= school.name %><br />
+	Class / Grade: <%= user.responsible %><br />
+</div>
+<div class="left_message">
+	<table border=1>
+	<tr><th>Recant Message</th><th>New</th><tr>
+	<tr><td colspan="2">メール１件へのリンク</td></tr>
+	<tr><td colspan="2">メール１件へのリンク</td></tr>
+	<tr><td colspan="2">メール１件へのリンク</td></tr>
+	</table>
+</div>
+<div class="left_etc">
+	<ul>
+		<li><a href="album.html">Album</a>
+		<li><a href="connection.html">Connection</a>
+		<li><a href="recommendations.html">Recommendations</a>
+	</ul>
+</div>
+<div class="left_carender">
+	no carender
+</div>
+</div>
+<div class="right">
+<div class="right_popular">
+	<h2>Popular Project / Plans</h2><a href="plans.html">See more</a>
+	<table border="1">
+	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	</table>
+</div>
+<div class="right_recommendations">
+	<h2>Recommendations</h2><a href="recommendations.html">See more</a>
+	<table border="1">
+	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	<tr><td>とりあえずプランの中身のみ表示してリンク（学校名等は省略）</td></tr>
+	</table>
+</div>
 </div>
